@@ -6,7 +6,10 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [Header("Car Settings")]
-    public float accelerationFactor = 10.0f, turnRate = 3.0f, driftFactor = 0.9f, maxSpeed = 10f;
+    public float accelerationFactor = 10.0f;
+    public float turnRate = 3.0f;
+    public float driftFactor = 0.9f;
+    public float maxSpeed = 10f;
 
     float accelerationInput = 0;
     float steeringInput = 0;
@@ -53,10 +56,7 @@ public class CarController : MonoBehaviour
 
     private void ApplySteering()
     {
-        float minSpeedToTurn = (carRigidBody.velocity.magnitude / 8);
-        minSpeedToTurn = Mathf.Clamp01(minSpeedToTurn);
-
-        rotationAngle -= steeringInput * turnRate * minSpeedToTurn;
+        rotationAngle -= steeringInput * turnRate;
 
         carRigidBody.MoveRotation(rotationAngle);
     }
@@ -73,5 +73,27 @@ public class CarController : MonoBehaviour
     {
         steeringInput = inputVector.x;
         accelerationInput = inputVector.y;
+    }
+
+    float GetLateralVelocity()
+    {
+        return Vector2.Dot(transform.right, carRigidBody.velocity);
+    }
+
+    public bool IsTireScreeching(out float lateralVelocity, out bool isBraking)
+    {
+        lateralVelocity = GetLateralVelocity();
+        isBraking = false;
+
+        if(accelerationInput < 0 && velocityVsUp > 0)
+        {
+            isBraking = true;
+            return true;
+        }
+
+        if (MathF.Abs(GetLateralVelocity()) > 2.0f)
+            return true;
+
+        return false;
     }
 }
