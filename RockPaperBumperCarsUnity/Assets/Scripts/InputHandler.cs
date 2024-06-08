@@ -12,13 +12,15 @@ public class InputHandler : MonoBehaviour
         carController = GetComponent<CarController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 inputVector = Vector2.zero;
 
         inputVector.x = Input.GetAxis("Horizontal");
         inputVector.y = Input.GetAxis("Vertical");
+
+        if (Input.GetKey(KeyCode.Joystick1Button0)) inputVector.y = -1;
+        else if (Input.GetKey(KeyCode.Joystick1Button1)) inputVector.y = 1;
 
         carController.SetInputVector(inputVector);
     }

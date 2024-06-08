@@ -96,4 +96,9 @@ public class CarController : MonoBehaviour
 
         return false;
     }
+
+    public float GetVelocityMagnitude()
+    {
+        return carRigidBody.velocity.magnitude;
+    }
 }
