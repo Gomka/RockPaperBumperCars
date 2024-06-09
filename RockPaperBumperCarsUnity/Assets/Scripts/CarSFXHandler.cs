@@ -17,6 +17,7 @@ public class CarSFXHandler : MonoBehaviour
     public float speedToPitchMultiplier = 0.2f;
     public float driftToVolumeMultiplier = 0.05f;
     public float driftToPitchMultiplier = 0.1f;
+    public float collisionVolumeMultiplier = 0.005f;
 
     float desiredEnginePitch = 0.5f;
     float tireScreechPitch = 0.5f;
@@ -53,7 +54,7 @@ public class CarSFXHandler : MonoBehaviour
         {
             if (isBraking)
             {
-                tiresScreechingAudioSource.volume = Mathf.Lerp(tiresScreechingAudioSource.volume, 0.6f, Time.deltaTime * 10);
+                tiresScreechingAudioSource.volume = Mathf.Lerp(tiresScreechingAudioSource.volume, 0.3f, Time.deltaTime * 10);
                 //tireScreechPitch = Mathf.Lerp(tireScreechPitch, 0.5f, Time.deltaTime * 10);
             }
             else
@@ -66,5 +67,17 @@ public class CarSFXHandler : MonoBehaviour
 
         }
         else tiresScreechingAudioSource.volume = Mathf.Lerp(tiresScreechingAudioSource.volume, 0, Time.deltaTime * 10);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        float relativeVelocity = collision.relativeVelocity.magnitude;
+        float collisionVolume = relativeVelocity * collisionVolumeMultiplier;
+
+        carHitAudioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
+        carHitAudioSource.volume = collisionVolume;
+
+        if (!carHitAudioSource.isPlaying)
+            carHitAudioSource.Play();
     }
 }
