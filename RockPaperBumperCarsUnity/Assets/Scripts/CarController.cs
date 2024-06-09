@@ -19,6 +19,7 @@ public class CarController : MonoBehaviour
 
     Rigidbody2D carRigidBody;
 
+
     void Awake()
     {
         carRigidBody = GetComponent<Rigidbody2D>();
