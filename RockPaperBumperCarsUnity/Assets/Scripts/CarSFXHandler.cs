@@ -10,17 +10,14 @@ public class CarSFXHandler : MonoBehaviour
     public AudioSource engineAudioSource;
     public AudioSource carHitAudioSource;
 
-    CarController carController;
-
     [Header("Sound Adjustments")]
     public float speedToVolumeMultiplier = 0.05f;
     public float speedToPitchMultiplier = 0.2f;
     public float driftToVolumeMultiplier = 0.05f;
-    public float driftToPitchMultiplier = 0.1f;
     public float collisionVolumeMultiplier = 0.005f;
 
+    CarController carController;
     float desiredEnginePitch = 0.5f;
-    float tireScreechPitch = 0.5f;
 
     void Awake()
     {
@@ -55,16 +52,11 @@ public class CarSFXHandler : MonoBehaviour
             if (isBraking)
             {
                 tiresScreechingAudioSource.volume = Mathf.Lerp(tiresScreechingAudioSource.volume, 0.3f, Time.deltaTime * 10);
-                //tireScreechPitch = Mathf.Lerp(tireScreechPitch, 0.5f, Time.deltaTime * 10);
             }
             else
             {
                 tiresScreechingAudioSource.volume = Mathf.Abs(lateralVelocity) * driftToVolumeMultiplier;
-                //tireScreechPitch = Mathf.Abs(lateralVelocity) * driftToPitchMultiplier;
             }
-
-            //tiresScreechingAudioSource.pitch = Mathf.Lerp(tiresScreechingAudioSource.pitch, tireScreechPitch, Time.deltaTime * 1.5f);
-
         }
         else tiresScreechingAudioSource.volume = Mathf.Lerp(tiresScreechingAudioSource.volume, 0, Time.deltaTime * 10);
     }
