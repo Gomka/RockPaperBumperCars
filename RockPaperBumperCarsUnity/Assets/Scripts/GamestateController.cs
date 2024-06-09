@@ -10,7 +10,7 @@ public class GamestateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        BeginRound();
     }
 
     // Update is called once per frame
@@ -24,15 +24,30 @@ public class GamestateController : MonoBehaviour
         numPaper = 0; 
         numScissors = 0;
 
-        for (int i = 0; i < cars.Length/3; i++)
+        for (int i = 0; i < cars.Length; i += 3)
         {
             cars[i].ForceChangeState(CarState.RockPaperScissorsState.rock);
             cars[i+1].ForceChangeState(CarState.RockPaperScissorsState.paper);
             cars[i+2].ForceChangeState(CarState.RockPaperScissorsState.scissors);
-            
+
             numRock ++; 
             numPaper ++; 
             numScissors ++;
         }
+    }
+
+    public void AddRock() {
+        numRock ++;
+        numScissors --;
+    }
+
+    public void AddPaper() {
+        numPaper ++;
+        numRock --;
+    }
+
+    public void AddScissors() {
+        numScissors ++;
+        numPaper --;
     }
 }

@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418861733646077828, guid: b83d05b56bd47bf45a6ac76114bb0d5f, type: 3}
       propertyPath: m_TagString
-      value: AI
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 2418861733646077829, guid: b83d05b56bd47bf45a6ac76114bb0d5f, type: 3}
       propertyPath: m_RootOrder

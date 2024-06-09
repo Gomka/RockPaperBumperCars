@@ -7,11 +7,15 @@ public class CarAIHandler : MonoBehaviour
 
     CarController carController;
     Vector3 targetPosition = Vector3.zero;
-    Transform targetTransform = null;
+    GameObject targetGameObject = null;
+    GamestateController gameController;
+    CarState currentState;
 
     void Awake()
     {
         carController = GetComponent<CarController>();
+        gameController = FindObjectOfType<GamestateController>();
+        currentState = GetComponent<CarState>();
     }
 
 
@@ -19,20 +23,36 @@ public class CarAIHandler : MonoBehaviour
     {
         Vector2 inputVector = Vector2.zero;
 
-        FollowTarget();
+        if(AcquireTarget()) {
+            inputVector.x = TurnTowardsTarget(true);
+            inputVector.y = ApplyThrottleOrBrake(inputVector.x);
 
-        inputVector.x = TurnTowardsTarget(true);
-        inputVector.y = ApplyThrottleOrBrake(inputVector.x);
-
-        carController.SetInputVector(inputVector);
+            carController.SetInputVector(inputVector);
+        }
     }
 
-    void FollowTarget() {
-        if(targetTransform == null)
-            targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    bool AcquireTarget() {
 
-        if(targetTransform != null) 
-            targetPosition = targetTransform.position;
+        switch (currentState.rpsState) {
+            case CarState.RockPaperScissorsState.rock: 
+                targetGameObject = GameObject.FindGameObjectWithTag("Scissors");
+                break;
+            case CarState.RockPaperScissorsState.paper: 
+                targetGameObject = GameObject.FindGameObjectWithTag("Rock");
+                break;
+            case CarState.RockPaperScissorsState.scissors: 
+                targetGameObject = GameObject.FindGameObjectWithTag("Paper");
+                break;
+
+            default: break;
+        }
+
+        if(targetGameObject != null) {
+            targetPosition = targetGameObject.transform.position;
+            return true;
+        }
+
+        return false;
     }
 
     float TurnTowardsTarget(bool isChasing) {
