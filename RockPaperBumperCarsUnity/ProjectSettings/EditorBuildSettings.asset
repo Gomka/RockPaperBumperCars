@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3067086e1fc14964bb44489a56ac5569
   - enabled: 1
     path: Assets/Scenes/BumperCarArena (MC).unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: eabc61200b681d34babf90dcf3189ea3
+  - enabled: 1
+    path: Assets/Scenes/BumperCarArena (CC).unity
+    guid: 10730bd95409d1140b985ecfcf593ed4
+  - enabled: 1
+    path: Assets/Scenes/BumperCarArena (DC).unity
+    guid: e62b635da8229f14b8969894556dd6a3
   m_configObjects: {}

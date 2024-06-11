@@ -8,6 +8,7 @@ public class GamestateController : MonoBehaviour
     int numRock = 0, numPaper = 0, numScissors = 0;
 
     public AudioSource hornAudioSource;
+    public PieChart chart;
 
     // Start is called before the first frame update
     void Start()
@@ -40,22 +41,32 @@ public class GamestateController : MonoBehaviour
             numScissors ++;
         }
 
+        float[] vars = {numRock, numPaper, numScissors};
+        chart.SetValues(vars);
         hornAudioSource.Play();
     }
 
     public void AddRock() {
         numRock ++;
         numScissors --;
+        float[] vars = {numRock, numPaper, numScissors};
+        chart.SetValues(vars);
     }
 
     public void AddPaper() {
         numPaper ++;
         numRock --;
+
+        float[] vars = {numRock, numPaper, numScissors};
+        chart.SetValues(vars);
     }
 
     public void AddScissors() {
         numScissors ++;
         numPaper --;
+
+        float[] vars = {numRock, numPaper, numScissors};
+        chart.SetValues(vars);
     }
 
     void Shuffle(CarState [] cars)
