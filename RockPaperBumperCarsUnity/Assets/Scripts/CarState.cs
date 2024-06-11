@@ -15,10 +15,13 @@ public class CarState : MonoBehaviour
     SpriteRenderer spriteRenderer;
     GamestateController controller;
 
+    Animator animator;
+
     void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         controller = FindObjectOfType<GamestateController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     public void ChangeState(RockPaperScissorsState target) {
@@ -44,7 +47,8 @@ public class CarState : MonoBehaviour
         }
 
         rpsState = target;
-        // do animation
+        animator.SetTrigger("HasChangedState");
+
         yield return new WaitForSeconds(invulnerabilityTime);
 
         

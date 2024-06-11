@@ -410,6 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2418861732569989582}
   - component: {fileID: 2418861732569989576}
+  - component: {fileID: 6387850383265585520}
   m_Layer: 0
   m_Name: Car Sprite
   m_TagString: Untagged
@@ -487,6 +488,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6387850383265585520
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418861732569989581}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2efd297512f00c34ebae37bd99875fa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2418861732695471629
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +807,7 @@ MonoBehaviour:
   rockSprite: {fileID: 21300000, guid: 514a7cf1b9e4aed498e0384925d75b8d, type: 3}
   paperSprite: {fileID: 21300000, guid: 9d1b89dd789d5a141aa2be5c5f79acac, type: 3}
   scissorsSprite: {fileID: 21300000, guid: ee39c081d9e170e408fc7ba7cca67553, type: 3}
+  invulnerabilityTime: 1
 --- !u!1 &2418861733815734213
 GameObject:
   m_ObjectHideFlags: 0
