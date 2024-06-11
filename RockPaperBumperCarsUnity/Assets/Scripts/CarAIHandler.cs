@@ -25,7 +25,7 @@ public class CarAIHandler : MonoBehaviour
 
         if(AcquireTarget()) {
             inputVector.x = TurnTowardsTarget(true);
-            inputVector.y = ApplyThrottleOrBrake(inputVector.x);
+            inputVector.y = 1.0f;
 
             carController.SetInputVector(inputVector);
         }
@@ -67,10 +67,5 @@ public class CarAIHandler : MonoBehaviour
         steerAmmount = Mathf.Clamp(steerAmmount, -1.0f, 1.0f);
 
         return steerAmmount;
-    }
-
-    float ApplyThrottleOrBrake(float inputX) {
-        //return 1.05f - Mathf.Abs(inputX);
-        return 1.0f;
     }
 }

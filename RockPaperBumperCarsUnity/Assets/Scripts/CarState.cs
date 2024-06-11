@@ -47,6 +47,7 @@ public class CarState : MonoBehaviour
         // do animation
         yield return new WaitForSeconds(invulnerabilityTime);
 
+        
         isChangingState = false;
     }
 
@@ -55,19 +56,19 @@ public class CarState : MonoBehaviour
 
             switch (collisionState.rpsState) {
                 case RockPaperScissorsState.rock: 
-                    if(this.rpsState == RockPaperScissorsState.scissors) {
+                    if(this.rpsState == RockPaperScissorsState.scissors && !isChangingState) {
                         ChangeState(RockPaperScissorsState.rock);
                         controller.AddRock();
                     }
                     break;
                 case RockPaperScissorsState.paper:
-                    if(this.rpsState == RockPaperScissorsState.rock) {
+                    if(this.rpsState == RockPaperScissorsState.rock && !isChangingState) {
                         ChangeState(RockPaperScissorsState.paper);
                         controller.AddPaper();
                     }
                     break;
                 case RockPaperScissorsState.scissors:
-                    if(this.rpsState == RockPaperScissorsState.paper) {
+                    if(this.rpsState == RockPaperScissorsState.paper && !isChangingState) {
                         ChangeState(RockPaperScissorsState.scissors);
                         controller.AddScissors();
                     }

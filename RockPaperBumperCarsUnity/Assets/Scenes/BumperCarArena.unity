@@ -1205,6 +1205,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1252,6 +1256,10 @@ PrefabInstance:
     - target: {fileID: 2439509354625967013, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_Name
       value: AI Car (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
@@ -2008,6 +2016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2056,6 +2068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI Car (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
 --- !u!4 &652525106 stripped
@@ -2081,6 +2097,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2128,6 +2148,10 @@ PrefabInstance:
     - target: {fileID: 2439509354625967013, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_Name
       value: AI Car (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
@@ -3285,6 +3309,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3332,6 +3360,10 @@ PrefabInstance:
     - target: {fileID: 2439509354625967013, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_Name
       value: AI Car (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
@@ -4535,6 +4567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1353937086}
   - component: {fileID: 1353937085}
+  - component: {fileID: 1353937087}
   m_Layer: 0
   m_Name: RockPaperScissorsController
   m_TagString: Untagged
@@ -4564,6 +4597,7 @@ MonoBehaviour:
   - {fileID: 683737400}
   - {fileID: 1094852941}
   - {fileID: 1420523739}
+  hornAudioSource: {fileID: 1353937087}
 --- !u!4 &1353937086
 Transform:
   m_ObjectHideFlags: 0
@@ -4579,6 +4613,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1353937087
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353937084}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6121340035984986999, guid: a4df313d42989df42a7884f194f1fd0a, type: 2}
+  m_audioClip: {fileID: 8300000, guid: d30ebfd904e4d434bbf7da34e780ae27, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1397312089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,6 +4925,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4842,6 +4976,10 @@ PrefabInstance:
     - target: {fileID: 2439509354625967013, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_Name
       value: AI Car (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
@@ -5036,6 +5174,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5083,6 +5225,10 @@ PrefabInstance:
     - target: {fileID: 2439509354625967013, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_Name
       value: AI Car (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
@@ -7301,6 +7447,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -7349,6 +7499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI Car (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
 --- !u!4 &1542722703 stripped
@@ -7374,6 +7528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767788930}
     m_Modifications:
+    - target: {fileID: 575316964616088193, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2439509354625967012, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7421,6 +7579,10 @@ PrefabInstance:
     - target: {fileID: 2439509354625967013, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
       propertyPath: m_Name
       value: AI Car (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240198149885555931, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3241c9e36014afa499b3d2c8c22eda14, type: 3}
@@ -29746,7 +29908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418861733646077828, guid: b83d05b56bd47bf45a6ac76114bb0d5f, type: 3}
       propertyPath: m_Name
-      value: Car
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2418861733646077829, guid: b83d05b56bd47bf45a6ac76114bb0d5f, type: 3}
       propertyPath: m_RootOrder

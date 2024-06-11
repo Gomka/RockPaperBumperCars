@@ -33,6 +33,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-6121340035984986999
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Horn
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: a3b42915548b80c4c9cc6cabc39921e6
+  m_Children: []
+  m_Volume: ce9904afb48b73d4b9f20ca9928bae70
+  m_Pitch: 1a9ac4926ed35d342b1cb68cfc8ba712
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 4681203233552322956}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &-3921798027324308436
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -71,6 +90,7 @@ AudioMixerController:
     - 26ae44e6ed879de49b13e810d09d839f
     - 341be15a5ac35604db15535221e69d88
     - 97b4ba2ebd7eecc4abd935f5d90e5cb1
+    - a3b42915548b80c4c9cc6cabc39921e6
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -131,6 +151,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 4c6ef7b3a20e27c4c8bbbdaf29c5f939
   m_Children:
+  - {fileID: -6121340035984986999}
   - {fileID: 4079027157166170907}
   m_Volume: 5b866f5b6a1ee3d4aa80d5548951d528
   m_Pitch: c625f1e03f5935a4b9263b045817cd88
@@ -163,6 +184,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &4681203233552322956
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d02d127fb5b52a141acd22f55edce3ea
+  m_EffectName: Attenuation
+  m_MixLevel: 12140a57a412658478f890deb533124a
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &6606463013411619855
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
